@@ -73,4 +73,32 @@
         Block scoped.
         const cannot be updated.
 
+7. What is event bubling?
+    - When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+    - event.target: The most deeply nested element that caused the event is called a target element, accessible as event.target.
+    - Stopping bubbling: event.stopPropagation() stops the move upwards, but on the current element all other handlers will run.
 
+    ```
+        <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+        <p onclick="alert('p')">P</p>
+        </div>
+        </form>
+
+        A click on the inner <p> first runs onclick:
+
+        On that <p>.
+        Then on the outer <div>.
+        Then on the outer <form>.
+        And so on upwards till the document object
+        So if we click on <p>, then we’ll see 3 alerts: p → div → form.
+
+    ```
+
+8. What is Capturing? 
+    - Event capturing is one of two ways to do event propagation in the HTML DOM. In event capturing, an event propagates from the outermost element to the target element. It is the opposite of event bubbling, where events propagate outwards from the target to the outer elements.
+    - The standard DOM Events describes 3 phases of event propagation:
+        1. Capturing phase – the event goes down to the element.
+        2. Target phase – the event reached the target element.
+        3. Bubbling phase – the event bubbles up from the element.
+    - For event capturing, we set the handler capture option to true: elem.addEventListener(event, handler, true). By default, it is set to bubbling: false.
