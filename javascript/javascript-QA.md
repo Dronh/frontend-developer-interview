@@ -102,3 +102,29 @@
         2. Target phase – the event reached the target element.
         3. Bubbling phase – the event bubbles up from the element.
     - For event capturing, we set the handler capture option to true: elem.addEventListener(event, handler, true). By default, it is set to bubbling: false.
+
+9. What is Web Worker? 
+    - Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface.
+    - Web workers let you do any time-consuming job in the background. The process is simple:
+        1. You create a web worker.
+        2. You tell the web worker what to do. The code that a worker runs is always stored in a separate JavaScript file
+        3. You start the web worker.
+        4. When the web worker is done, it tells you, and your code goes from there. (For example, show the results on your page.)
+
+10. What is Service Worker? 
+    - A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
+
+11. Difference between Web Worker and Service Workers? 
+    - Web workers are general-purpose scripts that enable us to offload processor-intensive work from the main thread.
+    - Service workers are a proxy between the browser and the network. By intercepting requests made by the document, service workers can redirect requests to a cache, enabling offline access.
+
+    ```
+                       | Web Workers  | Service Workers  |
+        |--------------|--------------|------------------|
+        | Instances    | Many per tab | One for all tabs |
+        | Lifespan     | Same as tab  | Independent      |
+        | Intended use | Parallelism  | Offline support  |
+
+
+    ```
+
