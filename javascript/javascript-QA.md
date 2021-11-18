@@ -128,3 +128,26 @@
 
     ```
 
+12 Types of javascript function
+    - Basic function
+        ```
+        function validFunctionName(parameter) {
+            return statement;
+        }
+        ```
+    - Anonymous function
+        A Function Expressions defines a named or anonymous function. An anonymous function is a function that has no name.
+        ```
+            var fullName = function(firstName, lastName) {
+                return `${firstName} ${lastName}`;
+            }
+            fullName("Jamal", "Uddin"); // Jamal Uddin
+        ```
+    - Arrow Function
+        An Arrow Function Expression is a shorter syntax for writing function expressions. Arrow functions do not create their own value.
+        ```
+            const double = (value) => {
+                return value * 2
+            }
+            double(10); // 20
+        ```
