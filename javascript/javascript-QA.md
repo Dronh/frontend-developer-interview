@@ -197,3 +197,74 @@
         sayHelloJon(); // Hello Jon Kuperman
         sayHelloKelly(); // Hello Kelly King
     ```
+
+14. What Is Object-oriented Programming?
+    - Object-oriented Programming treats data as a crucial element in program development and doesn't allow it to flow freely around the system. It ties data more securely to the function that operates on it and protects it from accidental modification from an outside function. OOP breaks down a problem into several entities called objects and builds data and functions around these objects. 
+
+15. Objects 
+    - Objects are data blueprints, They may represent a place, a person, an account, a table of data, or anything that the program needs to handle.
+
+16. Classes 
+    - We know that objects hold the data and the functions to manipulate the data. However, the two can be bound together in a user-defined data type with the help of classes. Any number of objects can be created in a class. Each object is associated with the data of type class. A class is therefore a collection of objects of similar types. 
+
+17. Encapsulation
+    - Encapsulation is the wrapping up/binding of data and function into a single unit called class. Data encapsulation is the most prominent feature of a class wherein the data is not accessible to the outside world, and only those functions wrapped inside the class can access it. These functions serve as the interface between the object’s data and the program. 
+    EX: getters & setters.
+
+18. Inheritance
+    - The phenomenon where objects of one class acquire the properties of objects of another class is called Inheritance. 
+
+19. Class implementation in Javascript
+    ```
+    class person {
+
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+
+        getDetails() {
+            return `${this.age}`
+        }
+    }
+
+    let personinstance = new person();
+    console.log(personinstance.getDetails())
+    ```
+
+20. Encapsulation implementation
+    - Encapsulation includes wrapping the property and the function within a single unit.
+    ```
+        class Emp_details{ 
+
+        constructor(name,id){ 
+
+            this.name = name; 
+
+            this.id = id; 
+
+        } 
+
+        add_Address(add){ 
+
+            this.add = add; 
+
+        } 
+
+        getDetails(){ 
+
+            console.log(`Employee Name: ${this.name}, Address: ${this.add}`); 
+
+        } 
+
+        } 
+
+        let person1 = new Emp_details('Anand',27); 
+
+        person1.add_Address('Bangalore'); 
+
+        person1.getDetails(); 
+
+    ```
+
+    
