@@ -267,4 +267,27 @@
 
     ```
 
-    
+21. What is Synchronous Programming?
+    - Synchronous programming includes the sequential execution of functions and processes. If a particular function needs a resource, execution stops until the currently executing function fetches the resource and finishes its process. 
+    - Although this ensures that the execution is error-free, it’s time-consuming and doesn’t use the system to its full potential. Asynchronous programming solves these issues. 
+
+22. What is Asynchronous Programming?
+    - Asynchronous programming, on the other hand, ensures that the execution does not stop if a function is performing other operations. Instead, the execution continues normally until the function is called back again. To facilitate this, concepts like Callbacks, Promises, and Async/await are used.
+    - Async and await are built on promises. The keyword “async” accompanies the function, indicating that it returns a promise. Within this function, the await keyword is applied to the promise being returned. The await keyword ensures that the function waits for the promise to resolve. On the surface, the execution looks synchronous, but it is asynchronous. The function’s execution is blocked at the await keyword’s placement in the coding.
+
+23. What is callback function? 
+    - A callback is a function passed as an argument to another function.
+    ```
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+    ```
+
